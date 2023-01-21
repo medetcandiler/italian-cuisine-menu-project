@@ -9,9 +9,9 @@ In this project I only used HTML, CSS, and JavaScript . The reason for creating 
 
 [![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/medetcandiler)
 
-[![Github Badge](https://img.shields.io/badge/-Github-000?style=quare&labelColor=000&logo=Github&logoColor=white&link=link)](https://github.com/medetcandiler)
-
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-C13584?style=flat-quare&labelColor=C13584&logo=instagram&logoColor=white&link=link)](https://www.instagram.com/medetdiler/)
+
+[![Github Badge](https://img.shields.io/badge/-Github-000?style=quare&labelColor=000&logo=Github&logoColor=white&link=link)](https://github.com/medetcandiler)
 
 [My Patika.dev Profile](https://app.patika.dev/meddo)
 ---
@@ -23,8 +23,5 @@ Proje örnek görsel:
 
 ## Prepared by
 **Medetcan Diler**
-
-
-
 
 ---

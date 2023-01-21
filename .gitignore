@@ -1,2 +1,9 @@
-#png
-.png
+# png
+*.png
+*.jpg
+
+# log
+*.log
+
+# videos
+*.mp4

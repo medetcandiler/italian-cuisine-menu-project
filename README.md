@@ -7,7 +7,7 @@ Hello Everyone. Let me briefly introduce myself to you. First of all I am so gla
 ## About My Italian Cuisine Menu Project
 In this project I only used HTML, CSS, and JavaScript . The reason for creating these website is improving my knowledge of JavaScrpit arrays, objects, functions, and methods. All menu list came from JavaScript object of array and I created all the DOM elements dynamically. Additionally all responsive design behind my project made by using CSS media rules.It was really entartaining and educational to me. I hope you like my projects. 
 
-![image]({https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white})(https://www.linkedin.com/in/medetcandiler)
+[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/medetcandiler)
 
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=quare&labelColor=000&logo=Github&logoColor=white&link=link)](https://github.com/medetcandiler)
 

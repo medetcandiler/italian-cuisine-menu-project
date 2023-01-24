@@ -70,23 +70,23 @@ const myMenu=[
         description:'Simplicity is central to the Tuscan cuisine. Legumes, bread, cheese, vegetables, mushrooms, and fresh fruit are used. '
     }
 ]
-let buttonsDOM=document.querySelector('.buttons-container');
+let buttonsAreaDOM=document.querySelector('.buttons-container');
 let menuAreaDOM=document.querySelector('.menu-container');
+
 // reach myMenu category property and create buttons 
-let category=[...new Set(myMenu.map(item => item.category))];
+let category=[...new Set(myMenu.map(item => item.category))]
 let x= category.map(e => e.toUpperCase)
 category.unshift('All')
 console.log(category)
-function createButton(items='All'){
+function createButton(items){
     const newButton=document.createElement('button');
     newButton.classList.add('button', 'button:hover', 'button:active');
     newButton.innerText= items.toUpperCase();
-    console.log(newButton.innerHTML)
     newButton.onclick= changeMenu;
-    return newButton;
+    return newButton
 }
 
-category.forEach(item => buttonsDOM.appendChild(createButton(item)));
+category.forEach(item => buttonsAreaDOM.appendChild(createButton(item)));
 
 // create menu list items in DOM
 function createMenu(item){
@@ -121,12 +121,14 @@ function changeMenu(){
         let filter=myMenu.filter(e => e.category.toUpperCase() == this.innerText);
         filter.forEach(e => menuAreaDOM.innerHTML+= createMenu(e))
     }
-}
+} 
 
 
 
 
 
+
+//***********TRIALS */
 // if( this.innerText=='basics'){
 //     let filter=myMenu.filter( e => e.category == 'basics');
 //     filter.map(e => menuAreaDOM.innerHTML+= createMenu(e));
@@ -137,8 +139,6 @@ function changeMenu(){
 //     let filter=myMenu.filter(e=> e.category=='traditional');
 //     filter.map(e=> menuAreaDOM.innerHTML+= createMenu(e))
 // }
-
-
 // switch(true){
 //     case(this.innerText=='All'):
 //         console.log(this.innerText=='All')

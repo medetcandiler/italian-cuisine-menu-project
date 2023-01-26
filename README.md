@@ -15,7 +15,7 @@ In this project I only used HTML, CSS, and JavaScript . The reason for creating 
 
 [My Patika.dev Profile](https://app.patika.dev/meddo)
 ---
-Proje örnek görsel:
+Sample of the project:
 
 ![sample-of-my-project](https://github.com/medetcandiler/italian-cuisine-menu-project/blob/main/menu-project.gif)
 

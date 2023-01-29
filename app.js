@@ -70,60 +70,53 @@ const myMenu=[
         description:'Simplicity is central to the Tuscan cuisine. Legumes, bread, cheese, vegetables, mushrooms, and fresh fruit are used. '
     }
 ]
-let buttonsAreaDOM=document.querySelector('.buttons-container');
-let menuAreaDOM=document.querySelector('.menu-container');
+let buttonsDOM=document.querySelector('.buttons-container')
+let menuAreaDOM=document.querySelector('.menu-container')
 
-// reach myMenu category property and create buttons 
-let category=[...new Set(myMenu.map(item => item.category))]
-let x= category.map(e => e.toUpperCase)
-category.unshift('All')
-console.log(category)
-function createButton(items){
-    const newButton=document.createElement('button');
-    newButton.classList.add('button', 'button:hover', 'button:active');
-    newButton.innerText= items.toUpperCase();
-    newButton.onclick= changeMenu;
+let category= [...new Set(myMenu.map( e => e.category))]
+category.unshift('all')
+console.log(category);
+function createButton(category){
+    let newButton= document.createElement('button')
+    newButton.classList.add('button', 'button:hover', 'button:active')
+    newButton.innerHTML = category
+    newButton.onclick= changeMenuList
     return newButton
 }
+category.forEach(element => buttonsDOM.append(createButton(element)))
 
-category.forEach(item => buttonsAreaDOM.appendChild(createButton(item)));
-
-// create menu list items in DOM
-function createMenu(item){
-    let items=`
+function createListItem(item){
+    let itemList=`
     <div class="row">
-            <div class="visual">
-                <img src="${item.img}" alt="${item.nameOfFood}">
-            </div>
-            <div class="write">
-                <div class="write-in">
-                    <div class="menu-title">
-                        <h4>${item.nameOfFood}</h4>
-                        <h4>${item.price}</h4>
-                    </div>
-                    <p class="description">${item.description}</p>
+        <div class="visual">
+            <img src="${item.img}" alt="${item.nameOfFood}">
+        </div>
+        <div class="write">
+            <div class="write-in">
+                <div class="menu-title">
+                    <h4>${item.nameOfFood}</h4>
+                    <h4>${item.price}</h4>
                 </div>
+                <p class="description">${item.description}</p>
             </div>
         </div>
+    </div>
     `
-    return items;
+    return itemList
 }
+myMenu.forEach( item => {
+    menuAreaDOM.innerHTML += createListItem(item)
+})
 
-myMenu.forEach(element => {
-    menuAreaDOM.innerHTML += createMenu(element) ;
-});
-
-function changeMenu(){
-    menuAreaDOM.innerHTML='';
-    if(this.innerText=='ALL'){
-        myMenu.map(element =>  menuAreaDOM.innerHTML+= createMenu(element));
+function changeMenuList(){
+    menuAreaDOM.innerHTML=''
+    if(this.innerText == 'all'){
+        myMenu.forEach( e => menuAreaDOM.innerHTML += createListItem(e))
     }else {
-        let filter=myMenu.filter(e => e.category.toUpperCase() == this.innerText);
-        filter.forEach(e => menuAreaDOM.innerHTML+= createMenu(e))
+        let filter=myMenu.filter( e => this.innerText == e.category)
+        filter.forEach( e => menuAreaDOM.innerHTML += createListItem(e))
     }
-} 
-
-
+}
 
 
 
@@ -157,3 +150,7 @@ function changeMenu(){
 //         traditional.map(e => menuAreaDOM.innerHTML+= createMenu(e));
 //         break;
 // }
+
+
+
+

@@ -9,7 +9,7 @@ In this project I only used HTML, CSS, and JavaScript . The reason for creating 
 
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=quare&labelColor=000&logo=Github&logoColor=white&link=link)](https://github.com/medetcandiler)
 
-[My Patika.dev Profile](https://app.patika.dev/meddo)
+[Patika.dev Profile](https://app.patika.dev/meddo)
 ---
 Sample of the project:
 
